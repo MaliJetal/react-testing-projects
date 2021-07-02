@@ -5,8 +5,8 @@
 ## Installing
 
 Clone or fork the course repository found at [https://github.com/MaliJetal/react-testing-projects.git]
-cd into the random-word-server directory (where this README is located).
-Run npm install
+<br />cd into the random-word-server directory (where this README is located).
+<br />Run npm install
 
 ## Starting the server
 

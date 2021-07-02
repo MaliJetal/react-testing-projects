@@ -26,6 +26,8 @@ app.get("/", (req, res) => {
   res.send(selectWord);
 });
 
-app.listen(3030, () => console.log("word server listening at port 3030"));
+app.listen(3030, () =>
+  console.log("Random Word server listening at port 3030")
+);
 
 module.exports = app;
