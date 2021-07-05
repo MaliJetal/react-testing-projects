@@ -10,11 +10,11 @@ import React from "react";
 const Congrats = () => {
   return (
     <div data-test="component-congrats" className="component-congrats">
-      Congrats Works!! Hurray!!
+      {/* Congrats Works!! Hurray!!
       <div>
         Yrhhh!! jhc
         <p>jksd</p>
-      </div>
+      </div> */}
     </div>
   );
 };

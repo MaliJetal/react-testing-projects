@@ -16,3 +16,9 @@ test("congrats component renders without error", () => {
   const component = findByTestAttr(wrapper, "component-congrats");
   expect(component.length).toBe(1);
 });
+
+test("renders no test when success proprs is false", () => {
+  const wrapper = setup({ success: true });
+  const component = findByTestAttr(wrapper, "component-congrats");
+  expect(component.text()).toBe("");
+});
