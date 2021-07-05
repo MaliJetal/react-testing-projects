@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --watch --no-chache",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,7 +43,7 @@
     "babel-jest": "^27.0.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-17-updated": "^1.0.2",
-    "jest": "^27.0.6",
+    "jest": "^26.6.3",
     "jest-enzyme": "^7.1.2"
   },
   "jest": {
