@@ -17,8 +17,14 @@ test("congrats component renders without error", () => {
   expect(component.length).toBe(1);
 });
 
-test("renders no test when success proprs is false", () => {
-  const wrapper = setup({ success: true });
+test("renders no test when success props is false", () => {
+  const wrapper = setup({ success: false });
   const component = findByTestAttr(wrapper, "component-congrats");
   expect(component.text()).toBe("");
+});
+
+test("renders non-empty congrats message when `success` is true", () => {
+  const wrapper = setup({ success: true });
+  const message = findByTestAttr(wrapper, "message-congrats");
+  expect(message.text()).not.toBe("");
 });
