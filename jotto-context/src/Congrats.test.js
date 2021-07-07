@@ -9,7 +9,7 @@ const setup = (props = {}) => {
 };
 
 test("congrats component renders without error", () => {
-  const wrapper = setup({ sucess: false });
+  const wrapper = setup({ success: false });
   const component = findByTestAttr(wrapper, "component-congrats");
   expect(component.length).toBe(1);
 });

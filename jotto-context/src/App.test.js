@@ -1,11 +1,8 @@
 import React from "react";
-import Enzyme, { mount } from "enzyme";
-import EnzymeAdapter from "enzyme-adapter-react-17-updated";
+import { mount } from "enzyme";
 
 import App from "./App";
 import { findByTestAttr } from "../test/testUtils";
-
-Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 const setup = () => {
   return mount(<App />);
