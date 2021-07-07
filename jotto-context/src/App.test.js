@@ -3,7 +3,7 @@ import Enzyme, { mount } from "enzyme";
 import EnzymeAdapter from "enzyme-adapter-react-17-updated";
 
 import App from "./App";
-import { findByTestAttr } from "./test/testUtils";
+import { findByTestAttr } from "../test/testUtils";
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { checkPropTypes } from "prop-types";
 
 export const findByTestAttr = (wrapper, val) => {
   return wrapper.find(`[data-test="${val}"]`);
@@ -11,7 +12,7 @@ export const findByTestAttr = (wrapper, val) => {
  * @returns {undefined} - Throws error if props do not conform.
  */
 export const checkProps = (component, confirmingProps) => {
-  const propError = checkPropsTypes(
+  const propError = checkPropTypes(
     component.propTypes,
     confirmingProps,
     "prop",

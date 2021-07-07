@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watch --no-chache",
+    "test": "react-scripts test --env=jsdom -setupFilesAfterEnv='/src/setupTests.ts'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
