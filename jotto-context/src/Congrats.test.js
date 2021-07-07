@@ -4,8 +4,11 @@ import { shallow } from "enzyme";
 import Congrats from "./Congrats";
 import { findByTestAttr, checkProps } from "../test/testutils";
 
+const defaultProps = { success: false };
+
 const setup = (props = {}) => {
-  return shallow(<Congrats {...props} />);
+  const setupProps = { ...defaultProps, ...props };
+  return shallow(<Congrats {...setupProps} />);
 };
 
 test("congrats component renders without error", () => {
@@ -27,6 +30,6 @@ test("renders non-empty congrats message when `success` is true", () => {
 });
 
 test("does not throw warning with expected props", () => {
-  const expectedProps = { sucess: false };
+  const expectedProps = { success: false };
   checkProps(Congrats, expectedProps);
 });
