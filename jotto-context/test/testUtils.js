@@ -1,6 +1,7 @@
 import React from "react";
 import { checkPropTypes } from "prop-types";
 import rootReducer from "../src/reducers";
+import { createStore } from "redux";
 
 export const storeFactory = (initialState) => {
   return createStore(rootReducer, initialState);
