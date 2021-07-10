@@ -2,15 +2,11 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import GuessedWords from "./GuessedWords";
-import { findByTestAttr, checkProps } from "../test/testutils";
+import { findByTestAttr, checkProps } from "../test/testUtils";
 
 const defaultProps = {
-  guessedWords: [
-    {
-      guessedWord: "train",
-      letterMatchCount: 3,
-    },
-  ],
+  success: false,
+  guessedWords: [{ guessedWord: "train", letterMatchCount: 3 }],
 };
 
 const setup = (props = {}) => {
@@ -44,19 +40,24 @@ describe("if there are words guessed", () => {
     { guessedWord: "agile", letterMatchCount: 1 },
     { guessedWord: "party", letterMatchCount: 5 },
   ];
+  const props = {
+    success: true,
+    guessedWords: guessedWords,
+  };
   beforeEach(() => {
-    wrapper = setup({ guessedWords });
+    wrapper = setup(props);
   });
   test("renders without error", () => {
-    const component = findByTestAttr(wrapper, "component-guessed-words");
+    const component = findByTestAttr(wrapper, "component-guessedWords");
     expect(component.length).toBe(1);
   });
   test('renders "guessed words" section', () => {
-    const guessedWordsNode = findByTestAttr(wrapper, "gussed-words");
+    const guessedWordsNode = findByTestAttr(wrapper, "guessed-words");
     expect(guessedWordsNode.length).toBe(1);
   });
   test("correct number of guessed words", () => {
-    const guessedWordsNodes = findByTestAttr(wrapper, "gussed-word");
+    const guessedWordsNodes = findByTestAttr(wrapper, "guessed-word");
+    console.log(guessedWordsNodes);
     expect(guessedWordsNodes.length).toBe(guessedWords.length);
   });
 });

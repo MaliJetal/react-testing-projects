@@ -6,19 +6,20 @@ import GuessedWords from "./GuessedWords";
 
 function App() {
   const props = {
-    success: false,
+    success: true,
     guessedWords: [
-      {
-        guessedWord: "train",
-        letterMatchCount: 3,
-      },
+      { guessedWord: "train", letterMatchCount: 3 },
+      { guessedWord: "agile", letterMatchCount: 1 },
+      { guessedWord: "party", letterMatchCount: 5 },
     ],
   };
   return (
     <div className="App" data-test="component-app">
-      App Works!!
-      <Congrats {...props} />
-      <GuessedWords {...props} />
+      <div className="container">
+        <h1>Jotto-Game</h1>
+        <Congrats {...props} />
+        <GuessedWords {...props} />
+      </div>
     </div>
   );
 }

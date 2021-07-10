@@ -15,10 +15,10 @@ import PropTypes from "prop-types";
  * @returns {JSX.Element} - Rendered component (or null if `success` prop is false).
  */
 const Congrats = (props) => {
-  if (props.success == true) {
+  if (props.success === true) {
     return (
       <div data-test="component-congrats" className="component-congrats">
-        <span data-test="message-congrats">
+        <span data-test="message-congrats" className="alert alert-success">
           Congrats! You have guessed right word.
         </span>
       </div>
