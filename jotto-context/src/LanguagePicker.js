@@ -17,5 +17,11 @@ function LanguagePicker({ setLangage }) {
     </span>
   ));
 
-  return;
+  return <div data-test="component-language-picker">{languageIcons}</div>;
 }
+
+LanguagePicker.propTypes = {
+  setLangage: propTypes.isRequired,
+};
+
+export default LanguagePicker;
